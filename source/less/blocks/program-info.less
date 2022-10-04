@@ -1,0 +1,307 @@
+.program-info {
+  margin: 0 auto;
+  min-width: 330px;
+
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 708px;
+    padding: 0 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto 51px;
+    padding: 0;
+  }
+}
+
+.program-info__wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  margin: 0 0 13px;
+  align-items: center;
+  padding: 0;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin: 0 0 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-items: flex-start;
+    padding: 0;
+    margin: 0 80px 0 0;
+  }
+}
+
+.program-info__radio {
+  border: 0;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 20px 0;
+  margin: 0 auto 8px;
+  width: 330px;
+
+  @media (min-width: @tablet-width) {
+    width: 637px;
+    border: 1px solid #e7e7e7;
+    margin: 0 0 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    display: flex;
+    padding: 34px 0 8px 20px;
+    margin: 0;
+    border: 1px solid #e7e7e7;
+    height: 200px;
+    box-sizing: border-box;
+  }
+}
+
+.program-info__radio-field {
+  appearance: none;
+}
+
+.program-info__radio-control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  margin: 0 0 20px 0;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 22px;
+  }
+}
+
+.program-info__radio-mark {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  border-radius: 25px;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid #bababa;
+    content: "";
+    background: url("../img/form/svg/radio-button.svg") no-repeat center;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    border: 1px solid #bababa;
+    background: url("../img/form/svg/radio-button-disabled.svg") no-repeat center;
+
+    &:focus-visible {
+      background: #5eaa2f;
+      outline: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    left: 26px;
+    top: -6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 7px;
+    top: -7px;
+  }
+}
+
+.program-info__radio-field[type="radio"]:checked + .program-info__radio-mark::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: url("../img/form/svg/radio-button.svg") no-repeat center;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.program-info__radio-field:focus-within + .program-info__radio-mark {
+  background: rgba(255, 255, 255, 0.6);
+  outline: 3px solid #83b3d3;
+}
+
+.program-info__form {
+  width: 280px;
+  margin: 0 0 19px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+  }
+}
+
+.program-info__form:not(:last-child) {
+  margin: 0 0 15px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 21px;
+  }
+}
+
+.program-info__label {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-transform: uppercase;
+  margin: 0 8px 0 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 13px 0 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 11px 0 0;
+  }
+}
+
+.program-info__input {
+  padding: 9px 0 9px 14px;
+  border: 1px solid #e7e7e7;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
+  appearance: textfield;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 1px solid #444444;
+    outline: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 547px;
+    padding: 16px 0 8px 19px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 10px 24px 11px 20px;
+  }
+}
+
+.program-info__input--name {
+  width: 211px;
+
+  @media (min-width: @tablet-width) {
+    width: 545px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 506px;
+    box-sizing: border-box;
+  }
+}
+
+.program-info__input--weight {
+  width: 189px;
+
+  @media (min-width: @tablet-width) {
+    width: 520px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 477px;
+    box-sizing: border-box;
+  }
+}
+
+.program-info__input--age {
+  width: 156px;
+
+  @media (min-width: @tablet-width) {
+    width: 479px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 436px;
+    box-sizing: border-box;
+  }
+}
+
+.program-info__radio-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    width: 346px;
+  }
+}
+
+.program-info__radio-item {
+  @media (min-width: @tablet-width) {
+    margin: 0 0 13px 0;
+  }
+}
+
+.program-info__radio-item:not(:last-child) {
+  margin: 0 0 3px 0;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.program-info__radio-label {
+  text-transform: uppercase;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 20px;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 1px;
+    margin: 0 0 22px;
+  }
+}

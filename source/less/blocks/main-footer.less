@@ -1,0 +1,132 @@
+.main-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 58px 30px 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    display: flex;
+    justify-content: space-between;
+    padding: 58px 110px 55px 110px;
+  }
+}
+
+.main-footer__logo {
+  position: relative;
+  margin: 0 0 60px 0;
+
+  @media (max-width: @mobile-width-only) {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 280px;
+      height: 1px;
+      right: -78px;
+      top: 51px;
+      background-color: #e6e6e6;
+    }
+  }
+
+  img {
+    width: 128px;
+    height: 24px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 155px 0 0;
+  }
+}
+
+.main-footer__catenergy-social {
+  width: 128px;
+}
+
+.main-footer__social {
+  position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 280px;
+      height: 1px;
+      right: -68px;
+      top: 25px;
+      background-color: #e6e6e6;
+    }
+  }
+}
+
+.main-footer__social-item {
+  position: relative;
+  margin: 0 24px;
+}
+
+.main-footer__social-item a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: -11px;
+  bottom: 0;
+  margin: auto;
+}
+
+.main-footer__social-list {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 0 43px 0;
+  max-width: 143px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
+.main-footer__social-link {
+  width: 28px;
+  height: 22px;
+  fill: #666666;
+  position: absolute;
+  margin: auto;
+}
+
+.main-footer__social-svg {
+  width: 28px;
+  height: 23px;
+}
+
+.main-footer__copyright {
+  width: 281px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    justify-content: flex-end;
+  }
+}
+
+
+.main-footer__copyright-htmlacademy {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 22px 0 0;
+  }
+}

@@ -1,0 +1,48 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.sprite-library {
+  display: none;
+}
+
+.page__body {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+}
+
+.page__body--bg {
+  @media (min-width: @desktop-width) {
+    &::before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 50%;
+      height: 694px;
+      top: -15px;
+      left: 50%;
+      z-index: -2;
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/png/index-background-desktop.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-color: rgba(104, 183, 56, 0.85);
+    }
+  }
+}
+
+html {
+  height: 100%;
+}
